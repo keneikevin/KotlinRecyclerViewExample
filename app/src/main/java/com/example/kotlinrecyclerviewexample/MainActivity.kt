@@ -21,6 +21,8 @@ private lateinit var blogAdapter: BlogRecyclerAdapter
     fun initRecyclerView(){
         recycler_view.apply {
             layoutManager =LinearLayoutManager(this@MainActivity)
+            val topSpacingItemDecoration = TopSpacingItemDecoration(30)
+            addItemDecoration(topSpacingItemDecoration)
             blogAdapter= BlogRecyclerAdapter()
             adapter=blogAdapter
         }
